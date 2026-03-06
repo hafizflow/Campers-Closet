@@ -33,6 +33,9 @@ class AppTextStyles{
   static TextStyle title24_600({Color? color}) => GoogleFonts.sora(fontSize: 24.sp, fontWeight: FontWeight.w600, color: color);
   static TextStyle title24_500({Color? color}) => GoogleFonts.sora(fontSize: 24.sp, fontWeight: FontWeight.w500, color: color);
   static TextStyle title30_700({Color? color}) => GoogleFonts.sora(fontSize: 30.sp, fontWeight: FontWeight.w700, color: color);
+  static TextStyle title52_700({Color? color}) => GoogleFonts.sora(fontSize: 52.sp, fontWeight: FontWeight.w700, color: color);
+  static TextStyle title19_300({Color? color}) => GoogleFonts.sora(fontSize: 19.sp, fontWeight: FontWeight.w300, color: color);
+  static TextStyle title15_400({Color? color}) => GoogleFonts.sora(fontSize: 15.sp, fontWeight: FontWeight.w400, color: color);
 }
 
   extension TextStyleExtension on TextStyle {
