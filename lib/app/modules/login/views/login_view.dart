@@ -3,6 +3,7 @@ import 'package:campers_closet/app/constants/app_logos.dart';
 import 'package:campers_closet/app/constants/app_sizes.dart';
 import 'package:campers_closet/app/constants/app_text_style.dart';
 import 'package:campers_closet/app/modules/login/controllers/login_controller.dart';
+import 'package:campers_closet/app/routes/app_pages.dart';
 import 'package:campers_closet/app/widgets/custom_button.dart';
 import 'package:campers_closet/app/widgets/custom_checkbox.dart';
 import 'package:campers_closet/app/widgets/labeled_text_field.dart';
@@ -31,9 +32,7 @@ class LoginView extends GetView<LoginController> {
 
               Text(
                 "Welcome Back!",
-                style: AppTextStyles.title30_400(
-                  color: AppColors.primaryText,
-                ),
+                style: AppTextStyles.title30_400(color: AppColors.primaryText),
               ),
 
               SizedBox(height: 10.h),
@@ -53,7 +52,7 @@ class LoginView extends GetView<LoginController> {
                 controller: TextEditingController(),
                 prefixIcon: AppLogos.mail,
                 hintText: "Enter your email",
-                bottomPadding: 20, 
+                bottomPadding: 20,
                 errorMessage: ''.obs,
               ),
 
@@ -65,19 +64,18 @@ class LoginView extends GetView<LoginController> {
                 hintText: "Enter your password",
                 isPassword: true,
                 textInputAction: TextInputAction.done,
-                bottomPadding: 12, 
-                errorMessage:  ''.obs,
+                bottomPadding: 12,
+                errorMessage: ''.obs,
               ),
 
               Row(
                 children: [
-                  Obx(() => GestureDetector(
+                  Obx(
+                    () => GestureDetector(
                       onTap: controller.toggleRememberMe,
                       child: Row(
                         children: [
-                          CustomCheckbox(
-                            value: controller.rememberMe.value,
-                          ),
+                          CustomCheckbox(value: controller.rememberMe.value),
                           SizedBox(width: 8.w),
                           Text(
                             "Remember me",
@@ -90,10 +88,13 @@ class LoginView extends GetView<LoginController> {
                     ),
                   ),
                   const Spacer(),
-                  Text(
-                    "Forgot Password?",
-                    style: AppTextStyles.title12_400(
-                      color: AppColors.primaryText,
+                  InkWell(
+                    onTap: () => controller.forgotPassword(),
+                    child: Text(
+                      "Forgot Password?",
+                      style: AppTextStyles.title12_400(
+                        color: AppColors.primaryText,
+                      ),
                     ),
                   ),
                 ],
@@ -126,19 +127,18 @@ class LoginView extends GetView<LoginController> {
                     ),
                   ),
                   InkWell(
-                      onTap: controller.goToSignUp,
-                      child: Text(
-                        "Sign Up",
-                        style: AppTextStyles.title12_400(
-                          color: AppColors.primaryColor,
-                        ),
+                    onTap: controller.goToSignUp,
+                    child: Text(
+                      "Sign Up",
+                      style: AppTextStyles.title12_400(
+                        color: AppColors.primaryColor,
                       ),
                     ),
+                  ),
                 ],
               ).paddingTop(25.h),
             ],
-          ).paddingHorizontal(AppSizes.defaultPadding)
-          .paddingBottom(50.h),
+          ).paddingHorizontal(AppSizes.defaultPadding).paddingBottom(50.h),
         ),
       ),
     );

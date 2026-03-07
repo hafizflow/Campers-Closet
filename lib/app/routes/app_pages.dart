@@ -1,5 +1,7 @@
+import 'package:campers_closet/app/modules/forget_password/views/otp_view.dart';
+import 'package:campers_closet/app/modules/forget_password/views/request_password_view.dart';
 import 'package:get/get.dart';
-
+import '../modules/forget_password/bindings/forget_password_binding.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -50,6 +52,16 @@ class AppPages {
       name: _Paths.WELCOME,
       page: () => const WelcomeView(),
       binding: WelcomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGET_PASSWORD,
+      page: () => const RequestPasswordView(),
+      binding: ForgetPasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.OTP,
+      page: () => const OtpView(),
+      binding: ForgetPasswordBinding(),
     ),
   ];
 }

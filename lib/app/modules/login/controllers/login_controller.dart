@@ -19,6 +19,10 @@ class LoginController extends GetxController {
     // Get.offAllNamed(AppPages.navbarScreen);
   }
 
+  void forgotPassword() {
+    Get.toNamed(Routes.FORGET_PASSWORD);
+  }
+
   void goToSignUp() {
     Get.offNamed(Routes.SIGNUP);
   }
