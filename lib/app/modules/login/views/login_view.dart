@@ -3,7 +3,6 @@ import 'package:campers_closet/app/constants/app_logos.dart';
 import 'package:campers_closet/app/constants/app_sizes.dart';
 import 'package:campers_closet/app/constants/app_text_style.dart';
 import 'package:campers_closet/app/modules/login/controllers/login_controller.dart';
-import 'package:campers_closet/app/routes/app_pages.dart';
 import 'package:campers_closet/app/widgets/custom_button.dart';
 import 'package:campers_closet/app/widgets/custom_checkbox.dart';
 import 'package:campers_closet/app/widgets/labeled_text_field.dart';
